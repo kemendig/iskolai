@@ -1,0 +1,38 @@
+﻿<Window x:Class="Futoverseny.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Futoverseny"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <Label Content="Rajtszám" Width="200" HorizontalAlignment="Left"/>
+            <TextBox Text="Pl.: 43452" IsEnabled="False" Name="tbxrajtszam" Width="200" HorizontalAlignment="Left"/>
+            <Label Content="Név" />
+            <TextBox Name="tbxnev"/>
+            <Label Content="E-mail cím"/>
+            <TextBox Name="tbxemail" Text="futoverseny@gmail.com"/>
+            <Label Content="Telefonszám"/>
+            <TextBox Name="tbxtelszam"/>
+            <Label Content="Ország"/>
+            <ComboBox Name="tbxorszag"/>
+            <Label Content="Táv (Csak egy távot lehet választani!)"/>
+            <ComboBox Name="cbxtav" Text="Táv"/>
+            <Label Content="A versenyen elért időeredmény:"/>
+            <TextBox Name="tbxversenyido" Text="pl.: 1:50:02"/>
+            <Button Content="Rajtszám generálása" Name="btnxgeneral" Width="150" HorizontalAlignment="Left" Click="btnxgeneral_Click"/>
+            <Button Content="Új versenyző mentése" Name="btnmentes" Width="200" HorizontalAlignment="Center" Margin="0,40,0,0" Click="btnmentes_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <Label Content="Név alapján kiválaszthatja a versenyzőket" Margin="5,0,0,0"/>
+            <ComboBox x:Name="cbxkivalasztasnevalapjan" SelectionChanged="cbxkivalasztasnevalapjan_SelectionChanged" Margin="5,0,0,0"/>
+            <TextBlock x:Name="tblxkiiras" Margin="5,0,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>
