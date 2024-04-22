@@ -1,0 +1,17 @@
+C:\Users\kgréta\Desktop\asztali\Aknamező0422\Aknamező0422\bin\Debug\Aknamező0422.exe.config
+C:\Users\kgréta\Desktop\asztali\Aknamező0422\Aknamező0422\bin\Debug\Aknamező0422.exe
+C:\Users\kgréta\Desktop\asztali\Aknamező0422\Aknamező0422\bin\Debug\Aknamező0422.pdb
+C:\Users\kgréta\Desktop\asztali\Aknamező0422\Aknamező0422\obj\Debug\Aknamező0422.csproj.AssemblyReference.cache
+C:\Users\kgréta\Desktop\asztali\Aknamező0422\Aknamező0422\obj\Debug\AknamezoWindow.g.cs
+C:\Users\kgréta\Desktop\asztali\Aknamező0422\Aknamező0422\obj\Debug\MainWindow.g.cs
+C:\Users\kgréta\Desktop\asztali\Aknamező0422\Aknamező0422\obj\Debug\App.g.cs
+C:\Users\kgréta\Desktop\asztali\Aknamező0422\Aknamező0422\obj\Debug\Aknamező0422_MarkupCompile.cache
+C:\Users\kgréta\Desktop\asztali\Aknamező0422\Aknamező0422\obj\Debug\Aknamező0422_MarkupCompile.lref
+C:\Users\kgréta\Desktop\asztali\Aknamező0422\Aknamező0422\obj\Debug\AknamezoWindow.baml
+C:\Users\kgréta\Desktop\asztali\Aknamező0422\Aknamező0422\obj\Debug\MainWindow.baml
+C:\Users\kgréta\Desktop\asztali\Aknamező0422\Aknamező0422\obj\Debug\Aknamező0422.g.resources
+C:\Users\kgréta\Desktop\asztali\Aknamező0422\Aknamező0422\obj\Debug\Aknamező0422.Properties.Resources.resources
+C:\Users\kgréta\Desktop\asztali\Aknamező0422\Aknamező0422\obj\Debug\Aknamező0422.csproj.GenerateResource.cache
+C:\Users\kgréta\Desktop\asztali\Aknamező0422\Aknamező0422\obj\Debug\Aknamező0422.csproj.CoreCompileInputs.cache
+C:\Users\kgréta\Desktop\asztali\Aknamező0422\Aknamező0422\obj\Debug\Aknamező0422.exe
+C:\Users\kgréta\Desktop\asztali\Aknamező0422\Aknamező0422\obj\Debug\Aknamező0422.pdb
