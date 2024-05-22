@@ -1,8 +1,10 @@
+//először a html és a css fut le, hogy ne fusson hibára
 document.addEventListener('DOMContentLoaded', () => {
     const boardElement = document.getElementById('sudoku-board');
     const messageElement = document.getElementById('message');
     const cells = [];
 
+//tábla létrehozása
     function createBoard(board) {
         boardElement.innerHTML = '';
         for (let row = 0; row < 9; row++) {
@@ -31,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
-
+// Cellák tartalmának az ellenőrzése
     function checkCell(row, col, num) {
         const cellElement = cells[row * 9 + col];
         const isFixed = cellElement.classList.contains('fixed');
@@ -41,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             cellElement.classList.add(isValid ? 'correct' : 'incorrect');
         }
     }
-
+//Ellenőrzi az összes cellát
     function checkBoard(board) {
         let isComplete = true;
         for (let row = 0; row < 9; row++) {
@@ -68,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
             messageElement.textContent = '';
         }
     }
-
+//megfelelősséget ellenőriz a cellákban 
     function isValidMove(board, row, col, num) {
         for (let x = 0; x < 9; x++) {
             if (board[row][x] === num || board[x][col] === num) {
