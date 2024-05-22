@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #b1f2ff;
+}
+
+#container {
+    text-align: center;
+    background: #d8f9ff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1{
+    color: #1b7ced;
+    font-family: Trebuchet MS;
+}
+
+h2{
+    color:  #1b7ced;
+    font-family: Trebuchet MS;
+}
+
+p{
+    color:  #1b7ced;
+    font-family: Trebuchet MS;
+}
+
+
+#sudoku-board {
+    display: grid;
+    grid-template-columns: repeat(9, 40px);
+    grid-template-rows: repeat(9, 40px);
+    gap: 2px;
+    margin: 20px auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #104a8e;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #000;
+    font-size: 18px;
+}
+
+.cell input {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+}
+
+.fixed {
+    background-color: #ddd;
+}
+
+#check-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#check-button{
+    font-family: Trebuchet MS;
+
+}
+
+.correct {
+    background-color: #d4edda;
+}
+
+
+
+.incorrect {
+    background-color: #f8d7da;
+}
