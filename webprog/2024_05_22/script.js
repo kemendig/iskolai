@@ -1,39 +1,53 @@
-//először a html és a css fut le, hogy ne fusson hibára
+// Amikor a teljes HTML dokumentum betöltődött, fut le ez az eseménykezelő
 document.addEventListener('DOMContentLoaded', () => {
+    // Kiválasztjuk a Sudoku táblát és az üzenet elemet a HTML dokumentumból
     const boardElement = document.getElementById('sudoku-board');
     const messageElement = document.getElementById('message');
+    // Létrehozunk egy üres tömböt, amely a cellákat fogja tárolni
     const cells = [];
 
-//tábla létrehozása
+    // Tábla létrehozása a megadott board tömb alapján
     function createBoard(board) {
+        // Kiürítjük a tábla elem tartalmát
         boardElement.innerHTML = '';
+        // Végigmegyünk a tábla sorain és oszlopain
         for (let row = 0; row < 9; row++) {
             for (let col = 0; col < 9; col++) {
+                // Létrehozunk egy div elemet minden cellához
                 const cellElement = document.createElement('div');
                 cellElement.classList.add('cell');
+                // Hozzáadjuk a cella elemet a cells tömbhöz
                 cells.push(cellElement);
+                // Ha a cella értéke nem null, akkor azt szövegként jelenítjük meg és fixként jelöljük
                 if (board[row][col] !== null) {
                     cellElement.textContent = board[row][col];
                     cellElement.classList.add('fixed');
                 } else {
+                    // Ha a cella értéke null, létrehozunk egy input elemet
                     const inputElement = document.createElement('input');
                     inputElement.type = 'text';
-                    inputElement.maxLength = 1;
+                    inputElement.maxLength = 1; // Egy karakter hosszúságú lehet csak
+                    // Eseménykezelő az input elem változására
                     inputElement.addEventListener('input', () => {
                         const value = inputElement.value;
+                        // Ha az érték nem 1 és 9 közötti szám, akkor töröljük az input tartalmát
                         if (value < 1 || value > 9 || isNaN(value)) {
                             inputElement.value = '';
                         } else {
+                            // Ellenőrizzük a cellát a beírt értékkel
                             checkCell(row, col, parseInt(value));
                         }
                     });
+                    // Hozzáadjuk az input elemet a cella elemhez
                     cellElement.appendChild(inputElement);
                 }
+                // Hozzáadjuk a cella elemet a tábla elemhez
                 boardElement.appendChild(cellElement);
             }
         }
     }
-// Cellák tartalmának az ellenőrzése
+
+    // Cellák ellenőrzése a Sudoku szabályai szerint
     function checkCell(row, col, num) {
         const cellElement = cells[row * 9 + col];
         const isFixed = cellElement.classList.contains('fixed');
@@ -43,7 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
             cellElement.classList.add(isValid ? 'correct' : 'incorrect');
         }
     }
-//Ellenőrzi az összes cellát
+
+    // Teljes tábla ellenőrzése
     function checkBoard(board) {
         let isComplete = true;
         for (let row = 0; row < 9; row++) {
@@ -70,7 +85,8 @@ document.addEventListener('DOMContentLoaded', () => {
             messageElement.textContent = '';
         }
     }
-//megfelelősséget ellenőriz a cellákban 
+
+    // Érvényes lépés ellenőrzése a Sudoku szabályai szerint
     function isValidMove(board, row, col, num) {
         for (let x = 0; x < 9; x++) {
             if (board[row][x] === num || board[x][col] === num) {
@@ -89,6 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return true;
     }
 
+    // Véletlenszerű tábla generálása
     function generateRandomBoard() {
         const board = Array.from({ length: 9 }, () => Array(9).fill(null));
 
@@ -136,8 +153,11 @@ document.addEventListener('DOMContentLoaded', () => {
         return board;
     }
 
+    // Létrehozunk egy véletlenszerű táblát
     const randomBoard = generateRandomBoard();
+    // Létrehozzuk a táblát a DOM-ban
     createBoard(randomBoard);
 
+    // Hozzáadjuk az eseménykezelőt a "Check" gombhoz, amely ellenőrzi a tábla állapotát
     document.getElementById('check-button').addEventListener('click', () => checkBoard(randomBoard));
 });
