@@ -1,0 +1,144 @@
+body {
+    background: linear-gradient(to right, gray, darkblue, black);
+    font-size: 1.05em;
+    animation: gradientAnimation 6s ease infinite;
+    background-size: 110% 110%;
+    font-family: Georgia;
+    color: #cccccc;
+}
+
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+#fejlec {
+    height: 100%;
+    object-fit: cover;
+}
+
+.container h2, .container h3 {
+    margin-top: 60px;
+    margin-bottom: 20PX;
+    text-shadow: black 5px 0px 5px; 
+}
+
+.container h2 {
+    text-decoration: underline;
+}
+
+.container h3 {
+    text-decoration: overline;
+}
+
+
+#bolygok p {
+    margin: 0 30px;
+    padding: 10px;
+}
+    
+
+#bolygok ul, ol {
+    margin: 0 60px;
+    padding: 10px;
+}
+
+.bolygo {
+    display: block;
+    margin: 30px auto !important;
+    transition: transform 3s;
+}
+
+.bolygo:hover {
+    transform: rotate(45deg);
+}
+
+.tablazat {
+    width: 70%;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 10%;
+}
+
+tbody {
+    color: darkblue;
+    text-align: left;
+    text-indent: 50px;
+}
+
+td {
+    padding: 10px;
+}
+
+.tablazat tbody tr:nth-child(odd) {
+    background-color: rgb(179, 205, 224);
+
+}
+
+.tablazat tbody tr:nth-child(even) {
+    background-color: rgb(100, 151, 177);
+}
+
+.footer {
+    padding: 20px 0;
+    text-align: center;
+    font-style: italic;
+}
+
+.center-btn {
+    color:rgb(50, 50, 50);
+    display: block;
+    margin: 30px auto !important;
+    width: 300px;
+    transition: all 0.5s;
+}
+
+.center-btn:hover {
+    box-shadow: 3px 8px 6px rgba(0, 0, 0, 0.3);
+}
+
+.center-btn a {
+    position: relative;
+    transition: 0.5s;
+}
+  
+.center-btn a:after {
+    content: "\21c8";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.5s;
+}
+  
+.center-btn:hover a {
+    padding-right: 25px;
+}
+
+.center-btn:hover a:after {
+    opacity: 1;
+    right: 0;
+}
+
+a {
+    text-decoration: none;
+    font-variant: small-caps;
+}
+
+#gyuruk li{
+    list-style-image: url('img/saturn_icon.png');
+}
+
+p{
+    text-align: justify;
+}
